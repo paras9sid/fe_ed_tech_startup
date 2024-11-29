@@ -50,12 +50,25 @@ html{
     font-size: 1.6rem;
 }
 
+.btn:hover{
+    background-color: #0062b3;
+    transition: all 0.2s ease-in;
+}
+
 .intro-section{
     display: flex;
     margin: 7rem auto;
 }
 .intro-text{
     max-width: 50%;
+}
+
+.float-bg{
+    position: absolute;
+    bottom: 100px;
+    left: 50px;
+    z-index: -1;
+    animation: bounce 4s ease 0.5s infinite alternate;
 }
 
 .introduction .tag-line{
@@ -70,6 +83,18 @@ html{
     color: #2d3748;
     font-size: 4.6rem;
     margin-bottom: 3rem;;
+    position: relative;
+}
+
+.highlight::before{
+    content:"";
+    width: 315px;
+    height: 20%;
+    background-color: #1da1f2;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0.3;
 }
 
 .introduction .description{
@@ -88,10 +113,39 @@ html{
     position: absolute;
     bottom: 100px;
     left: 50px;
+    animation: bounce 2s ease 0.5s infinite alternate, slideRight 0.5s ease 0s 1 alternate;
 }
 
 .float-tr{
     position: absolute;
     top: 50px;
     right: 50px;
+    animation: bounce 2.1s ease 0.5s infinite alternate, slideLeft 0.5s ease 0s 1 alternate;
+}
+
+@keyframes bounce {
+    0%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(20px);
+    }
+}
+
+@keyframes slideRight {
+    0%{
+        transform: translateX(-50px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+@keyframes slideLeft {
+    0%{
+        transform: translateX(50px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
 }
