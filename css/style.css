@@ -1,25 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    color: #2d3748;
-    text-decoration: none;
-    list-style: none;
-}
-
-html{
-    font-size: 10px;
-}
-
-.container{
-    width: 90%;
-    margin: auto;
-    max-width: 1280px;
-}
+@import url(./_global.css);
+@import url(./_utility.css);
 
 .navbar{
     display: flex;
@@ -36,31 +16,21 @@ html{
 
 .d-menu ul li{
     padding: 2rem;
-    color:#5c6069;
+    color: var(--theme-text-dull);
     font-size: 1.6rem;
     font-weight: 600;
 }
 
-.btn{
-    color:#ffffff;
-    background-color: #0081eb;
-    padding: 1rem 2rem;
-    border-radius: 12px;
-    font-weight: 400;
-    font-size: 1.6rem;
+.d-menu ul li:hover{
+    color: var(--theme-color);
 }
-
-.btn:hover{
-    background-color: #0062b3;
-    transition: all 0.2s ease-in;
-}
-
 .intro-section{
     display: flex;
     margin: 7rem auto;
 }
 .intro-text{
     max-width: 50%;
+    padding: 2rem 0;
 }
 
 .float-bg{
@@ -75,12 +45,12 @@ html{
     font-weight: 700;
     font-size: 2.8rem;
     margin-bottom: 3rem;
-    color: #0081eb;
+    color: var(--theme-color);
 }
 
 .introduction .main-line{
     font-weight: 700;
-    color: #2d3748;
+    color: var(--theme-text);
     font-size: 4.6rem;
     margin-bottom: 3rem;;
     position: relative;
@@ -99,7 +69,7 @@ html{
 
 .introduction .description{
     font-size: 1.8rem;
-    color: #718096;
+    color: var(--theme-text-long);
     margin-bottom: 4rem;
 }
 
